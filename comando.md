@@ -3,7 +3,7 @@ Faça um site similar a Angel, mas para Rayka.
 Detalhes:
 - Fotos e videos: pastas foto-modelo-rayka e video-modelo-rayka
 - Nome: Rayka Riller
-- WhatsApp: 5527997907114
+- WhatsApp: 5527999393131
 - Preço: 250 $ meia sem anal 
 350 $ a hora sem anal
 300$ meia com anal 
