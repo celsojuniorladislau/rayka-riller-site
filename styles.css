@@ -1,0 +1,131 @@
+body { font-family: 'Inter', sans-serif; background-color: #0a0a0a; color: #ffffff; scroll-behavior: smooth; }
+.font-serif { font-family: 'Playfair Display', serif; }
+.gold-accent { color: #D4AF37; }
+.bg-gold { background-color: #D4AF37; }
+.border-gold { border-color: #D4AF37; }
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    z-index: 100;
+    transition: transform 0.3s ease;
+}
+.whatsapp-float:hover { transform: scale(1.1); }
+@media (max-width: 768px) {
+    .whatsapp-float { width: 52px; height: 52px; bottom: 20px; right: 20px; }
+    .whatsapp-float svg { width: 28px; height: 28px; }
+}
+.mobile-menu { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+.mobile-menu.open { max-height: 280px; }
+#home, #servicos, #valores, #contato { scroll-margin-top: 5rem; }
+@media (max-width: 768px) { #home, #servicos, #valores, #contato { scroll-margin-top: 4.5rem; } }
+
+/* Hero mobile */
+@media (max-width: 768px) {
+    #home {
+        min-height: 70vh;
+        min-height: 70dvh;
+    }
+    #home > div:first-child {
+        min-height: 60vh;
+        min-height: 60dvh;
+    }
+    #home > div:first-child img {
+        width: 100%;
+        height: 100%;
+        min-height: 60vh;
+        min-height: 60dvh;
+        object-fit: cover;
+        object-position: center 30%;
+    }
+    #home > div:last-child {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        justify-content: center;
+    }
+    #home > div:last-child h2 {
+        font-size: clamp(1.75rem, 10vw, 2.5rem);
+        line-height: 1.2;
+        margin-bottom: 0.25rem;
+    }
+    #home > div:last-child p {
+        font-size: 0.6875rem;
+        letter-spacing: 0.15em;
+    }
+}
+#gallery-modal { opacity: 0; visibility: hidden; transition: opacity 0.25s ease, visibility 0.25s ease; }
+#gallery-modal.open { opacity: 1; visibility: visible; }
+#gallery-modal .modal-img-wrap { transform: scale(0.95); transition: transform 0.25s ease; }
+#gallery-modal.open .modal-img-wrap { transform: scale(1); }
+.price-card {
+    background: linear-gradient(145deg, rgba(38,38,38,0.6) 0%, rgba(24,24,24,0.8) 100%);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(212,175,55,0.35);
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.3), 0 0 0 1px rgba(212,175,55,0.15), inset 0 1px 0 rgba(255,255,255,0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+}
+.price-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(212,175,55,0.5);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.4), 0 0 0 1px rgba(212,175,55,0.2), inset 0 1px 0 rgba(255,255,255,0.05);
+}
+.price-card.active {
+    border-color: rgba(212,175,55,0.85);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.4), 0 0 0 2px rgba(212,175,55,0.5), 0 0 28px rgba(212,175,55,0.2), inset 0 1px 0 rgba(255,255,255,0.06);
+}
+.price-card.active:hover {
+    border-color: rgba(212,175,55,0.95);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.4), 0 0 0 2px rgba(212,175,55,0.6), 0 0 32px rgba(212,175,55,0.25), inset 0 1px 0 rgba(255,255,255,0.06);
+}
+.price-card .card-divider {
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+    opacity: 0.7;
+    margin: 0 auto;
+}
+img.no-download {
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    user-drag: none;
+    pointer-events: auto;
+}
+
+/* Skip link - visível apenas no foco */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    z-index: 9999;
+    padding: 0.75rem 1rem;
+    background: #D4AF37;
+    color: #0a0a0a;
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+.skip-link:focus-visible {
+    left: 0;
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}
+
+/* Focus visível para acessibilidade */
+a:focus-visible,
+button:focus-visible,
+[tabindex="0"]:focus-visible {
+    outline: 2px solid #D4AF37;
+    outline-offset: 2px;
+}
