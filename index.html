@@ -122,6 +122,14 @@
                             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white" viewBox="0 0 16 16"><path d="M4 2.5l9 5.5-9 5.5V2.5z"/></svg>
                         </div>
                     </button>
+                    <button class="video-thumb relative aspect-[3/4] overflow-hidden rounded-sm cursor-pointer hover:opacity-90 transition bg-zinc-900 group" data-video="video-modelo/mais_um_video.mp4" aria-label="Reproduzir vídeo 8">
+                        <video class="w-full h-full object-cover" preload="metadata" muted playsinline loop disablePictureInPicture controlsList="nodownload">
+                            <source src="video-modelo/mais_um_video.mp4" type="video/mp4">
+                        </video>
+                        <div class="play-overlay absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition pointer-events-none">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white" viewBox="0 0 16 16"><path d="M4 2.5l9 5.5-9 5.5V2.5z"/></svg>
+                        </div>
+                    </button>
                 </div>
             </div>
         </section>
