@@ -1,4 +1,17 @@
 (function() {
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'PrintScreen') {
+            e.preventDefault();
+            alert('Screenshots e impressões não são permitidas neste site.');
+        }
+    });
+    document.addEventListener('beforeprint', function() {
+        alert('Impressão não é permitida neste site.');
+        window.print = function() {};
+    });
+})();
+
+(function() {
     function protectImage(img) {
         img.addEventListener('contextmenu', function(e) { e.preventDefault(); });
         img.addEventListener('dragstart', function(e) { e.preventDefault(); });
